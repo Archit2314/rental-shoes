@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f8f8;
+  color: #111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 75px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.logo span {
+  margin-right: 7px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a {
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #666;
+}
+
+.liked-link {
+  position: relative;
+}
+
+.like-count {
+  background: #111;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  padding: 2px 6px;
+  position: absolute;
+  top: -12px;
+  right: -16px;
+}
+
+.rent-btn,
+.primary-btn {
+  border: none;
+  background: #111;
+  color: white;
+  padding: 12px 23px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.rent-btn:hover,
+.primary-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 650px;
+  padding: 70px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: #f1f1f1;
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.small-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  color: #777;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #777;
+}
+
+.hero-text {
+  color: #666;
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.secondary-btn {
+  border: 1px solid #111;
+  padding: 12px 23px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background: #111;
+  color: white;
+}
+
+.hero-image {
+  width: 45%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+/* SHOES */
+
+.shoes-section {
+  padding: 90px 7%;
+  background: white;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.section-heading h2,
+.liked-section h2,
+.visit-section h2,
+.contact-section h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  width: 250px;
+  padding: 13px 18px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  outline: none;
+  font-family: inherit;
+}
+
+.shoe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.shoe-card {
+  background: #f8f8f8;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.shoe-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.shoe-image {
+  height: 270px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shoe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heart-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.heart-btn.active {
+  background: #111;
+}
+
+.shoe-details {
+  padding: 20px;
+}
+
+.shoe-details > p {
+  color: #888;
+  font-size: 12px;
+}
+
+.shoe-details h3 {
+  font-size: 20px;
+  margin: 5px 0 18px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-row strong {
+  font-size: 19px;
+}
+
+.price-row span {
+  color: #777;
+  font-size: 12px;
+}
+
+.rent-small {
+  border: none;
+  background: #111;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* LIKED */
+
+.liked-section {
+  padding: 90px 7%;
+  background: #f1f1f1;
+  min-height: 300px;
+}
+
+.empty-liked {
+  color: #777;
+  margin-top: 20px;
+}
+
+.liked-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.liked-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  min-width: 260px;
+}
+
+.liked-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.liked-item h3 {
+  font-size: 15px;
+}
+
+.liked-item p {
+  color: #777;
+  font-size: 13px;
+}
+
+/* VISIT */
+
+.visit-section {
+  padding: 100px 7%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 80px;
+  align-items: center;
+  background: white;
+}
+
+.visit-section p:not(.small-title) {
+  color: #666;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+.location-card {
+  background: #111;
+  color: white;
+  padding: 45px;
+  border-radius: 25px;
+}
+
+.location-icon {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.location-card h3 {
+  margin-bottom: 15px;
+}
+
+.location-card p {
+  color: #ccc !important;
+  margin-bottom: 10px !important;
+}
+
+/* CONTACT */
+
+.contact-section {
+  text-align: center;
+  padding: 100px 7%;
+  background: #f1f1f1;
+}
+
+.contact-section > p:not(.small-title) {
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.contact-info div {
+  background: white;
+  width: 250px;
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.contact-info span {
+  font-size: 25px;
+}
+
+.contact-info h3 {
+  margin: 10px 0 5px;
+}
+
+.contact-info p {
+  color: #777;
+  font-size: 13px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 25px;
+  font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .shoe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 15px 5%;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    font-size: 12px;
+  }
+
+  .rent-btn {
+    padding: 9px 15px;
+  }
+
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-image img {
+    height: 300px;
+  }
+
+  .shoes-section,
+  .liked-section,
+  .visit-section,
+  .contact-section {
+    padding: 60px 5%;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .search-box {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .shoe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info div {
+    width: 100%;
+  }
+}
